@@ -1,4 +1,3 @@
-import 'semantic-ui-css/semantic.min.css';
 import React from 'react';
 import { Route } from 'react-router-dom'
 import HomePage from './components/pages/HomePage'
