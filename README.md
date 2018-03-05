@@ -4,3 +4,20 @@ This is a repository I created to follow Rem Zolotykh [videos](https://www.youtu
 
 #### Notes
 I will attempt to make any notes on anything worth mentioning on here.
+
+There is a difference between using braces `{}` and not using braces in arrow functions. You can write :
+```
+ () => {
+     someMethod.drawsToScreen()
+}
+```
+This will not return anything. The method will run but the actual anonymous function will not return anything. If you write: 
+```
+ () => someMethod.drawsToScreen();
+```
+The anonymous function returns the method. This is actually a shorthand for:
+```
+ () => {
+     return someMethod.drawsToScreen()
+}
+```
