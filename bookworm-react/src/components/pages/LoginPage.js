@@ -5,11 +5,8 @@ import LoginForm from '../forms/LoginForm';
 import { login } from '../../actions/auth'
 
 class LoginPage extends React.Component{
-    state={}
-
-    submit = data =>{
-        this.props.login(data).then(() => this.props.history.push("/"));
-    }
+    submit = data => this.props.login(data).then(() => this.props.history.push("/"));
+ 
 
     render(){
         return (
