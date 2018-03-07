@@ -21,7 +21,7 @@ class LoginForm extends React.Component {
 
     onSubmit = () => {
         const errors = this.validate(this.state.data);
-        this.setState({ errors }); // why does this work?
+        this.setState({ errors }); // why does this work? This works because errors is populated in this.validate
         if (Object.keys(errors).length === 0) {
             this.setState({ loading: true })
             this.props
