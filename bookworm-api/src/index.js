@@ -2,14 +2,17 @@ import express from 'express';
 import path from 'path'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
+import dotenv from 'dotenv'
 import auth from './routes/auth'
 
 // passwordhash for pass 'abc': $2a$10$1zSye2oiueM6v9Xq9x4nVOGY1bKXzNuPCn1f1HcJhLE./7ev6hWhm
 // passwordhash for pass 'lol': $2a$10$eaa15IlRRzOt6hMKP0D7wOBOnvn6IXvcA7B5GJjmSWl8b.eLVzOje
 
+dotenv.config();
+
 const app = express();
 app.use(bodyParser.json())
-mongoose.connect('mongodb://localhost/bookworm');
+mongoose.connect(process.env.MONGODB_URL);
 // , { useMongoClient: true }
 app.use('/api/auth', auth)
 

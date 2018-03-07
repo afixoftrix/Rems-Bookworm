@@ -21,15 +21,17 @@ class LoginForm extends React.Component {
 
     onSubmit = () => {
         const errors = this.validate(this.state.data);
-        this.setState({ errors }); // why does this work? This works because errors is populated in this.validate
+        this.setState({ errors }); // This works because of : Shorthand property names (ES2015)
         if (Object.keys(errors).length === 0) {
             this.setState({ loading: true })
             this.props
                 .submit(this.state.data)
-                .catch(err => this.setState({ 
-                    errors: err.response.data.errors,
-                    loading: false
-                })); 
+                .catch(err => {
+                    this.setState({
+                        errors: err.response.data.errors,
+                        loading: false
+                    })
+                }); 
                 // read up on promises
         }
     }
