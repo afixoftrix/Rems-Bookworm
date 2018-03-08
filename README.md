@@ -21,3 +21,7 @@ The anonymous function returns the method. This is actually a shorthand for:
      return someMethod.drawsToScreen()
 }
 ```
+Log: 03-08-2018
+I now understand the basics of how to log in and log out work with react redux mongo express node. Full stack is not pretty ridiculously large. My focus now is getting a more detailed understanding of redux and how it works with react. 
+
+So far I know that we have reducers which take state and action and make changes to the redux store based on the action. I will need to read the documentation, watch more tutorials and then get some practice with the technology.
